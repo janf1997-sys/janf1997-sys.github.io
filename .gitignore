@@ -1,0 +1,21 @@
+# Antigravity agent & local configs
+.agents/
+mcp_config.json
+mcp.json
+
+# Dependencies
+node_modules/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
