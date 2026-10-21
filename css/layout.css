@@ -341,5 +341,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .timeline-card-header--center {
+    align-items: center;
+  }
 }
 
