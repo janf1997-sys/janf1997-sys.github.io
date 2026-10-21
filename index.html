@@ -5,6 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jan Furrer // Portfolio</title>
+
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&display=swap" />
+
+  <!-- Core Stylesheets -->
   <link rel="icon" type="image/png" href="assets/img/logo.png" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
@@ -13,195 +21,304 @@
 </head>
 
 <body>
+  <!-- ======================================================================
+       Site Header & Global Navigation
+       ====================================================================== -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="#" class="logo-link">
-        <img src="assets/img/logo.png" alt="JF Logo" class="logo-img" />
+      <!-- Brand Logo & Animated Navigation -->
+      <a href="#" class="logo-link" aria-label="Jan Furrer – Startseite">
+        <img src="assets/img/logo.png" alt="JF Logo" class="logo-img" width="38" height="38" decoding="async" />
         <span class="logo-typewriter">
           <span id="typewriter-text">janf</span>
-          <span class="typewriter-cursor"></span>
+          <span class="typewriter-cursor" aria-hidden="true"></span>
         </span>
       </a>
-      <nav class="header-nav">
+
+      <!-- In-Page Navigation Links -->
+      <nav class="header-nav" aria-label="Hauptnavigation">
         <ul class="nav-list">
           <li><a href="#werdegang" class="nav-link">Werdegang</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projekte" class="nav-link">Projekte</a></li>
         </ul>
       </nav>
+
+      <!-- CV Download Action Button -->
       <a href="assets/docs/Lebenslauf.pdf" class="btn btn-download" download="Jan_Furrer_Lebenslauf.pdf">
-        <img src="assets/icons/download.svg" alt="" />
+        <img src="assets/icons/download.svg" alt="" width="18" height="18" decoding="async" aria-hidden="true" />
         <span>Download Lebenslauf</span>
       </a>
     </div>
   </header>
 
+  <!-- ======================================================================
+       Main Layout Container (Sidebar + Content Stage)
+       ====================================================================== -->
   <div class="page-container">
+
+    <!-- ==========================================
+         Sidebar / Profile Overview
+         ========================================== -->
     <aside class="sidebar">
+      <!-- Profile Header: Name & Avatar -->
       <div class="sidebar-profile">
         <h1 class="profile-name">Jan Furrer</h1>
-        <img src="assets/img/profile.jpg" alt="Jan Furrer" class="profile-avatar" />
+        <img src="assets/img/profile.jpg" alt="Jan Furrer" class="profile-avatar" width="180" height="180"
+          decoding="async" />
       </div>
 
-      <section class="sidebar-section">
-        <h2 class="sidebar-title">Personalien</h2>
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            <a href="mailto:janf.1997@gmail.com">janf.1997@gmail.com</a>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            <a href="tel:+41784212369">078 421 23 69</a>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>Guyerweg 3<br />5000 Aarau</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-              <line x1="16" y1="2" x2="16" y2="6" />
-              <line x1="8" y1="2" x2="8" y2="6" />
-              <line x1="3" y1="10" x2="21" y2="10" />
-            </svg>
-            <span>13.01.1997</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="sidebar-section">
-        <h2 class="sidebar-title">Ausbildung</h2>
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="7" />
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-            </svg>
-            <span>Detailhandelsfachmann Consumer Electronics EFZ</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="7" />
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
-            </svg>
-            <span>Sekundarschulabschluss</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="sidebar-section">
-        <h2 class="sidebar-title">Sprachkenntnisse</h2>
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-            <span>Deutsch: Muttersprache</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-            <span>Englisch: Gute Kenntnisse</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="sidebar-section">
-        <h2 class="sidebar-title">Kernkompetenzen</h2>
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
-            <span>Autodidaktisches Lernen</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18" cy="18" r="3" />
-              <circle cx="6" cy="6" r="3" />
-              <path d="M6 9v12" />
-              <path d="M18 15a9 9 0 0 0-9-9H6" />
-            </svg>
-            <span>Strukturiertes &amp; Lösungsorientiertes Arbeiten</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <span>Analytisches Denken &amp; Detailgenauigkeit</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="sidebar-section">
-        <h2 class="sidebar-title">Aktueller Fokus</h2>
-        <ul class="sidebar-list">
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <circle cx="12" cy="12" r="4" />
-              <line x1="21.17" y1="8" x2="12" y2="8" />
-              <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
-              <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
-            </svg>
-            <span>The Odin Project</span>
-          </li>
-          <li class="sidebar-item">
-            <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3" />
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-            </svg>
-            <span>Vertiefung SQL &amp; relationale Datenbanken</span>
-          </li>
-        </ul>
-      </section>
-
+      <!-- Quick Social Actions -->
       <div class="sidebar-social">
         <a href="https://github.com/janf1997-sys" target="_blank" rel="noopener noreferrer" class="btn-social"
           aria-label="GitHub Profil">
-          <img src="assets/icons/github.svg" alt="GitHub" />
+          <img src="assets/icons/github.svg" alt="" width="22" height="22" decoding="async" aria-hidden="true" />
         </a>
+        <a href="mailto:janf.1997@gmail.com" class="btn-social" aria-label="E-Mail senden">
+          <!-- Icon: Mail Envelope -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+            focusable="false">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Collapsible Profile Details (Mobile Accordion / Desktop Sidebar) -->
+      <div class="sidebar-accordion">
+
+        <!-- Details: Contact & Personal Details -->
+        <details class="sidebar-section" open>
+          <summary class="sidebar-title">
+            <span>Personalien</span>
+            <!-- Icon: Chevron -->
+            <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <!-- Icon: Mail Envelope -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:janf.1997@gmail.com">janf.1997@gmail.com</a>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Phone -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a href="tel:+41784212369">078 421 23 69</a>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Location Pin -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Guyerweg 3<br />5000 Aarau</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Calendar -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <span>13.01.1997</span>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Details: Formal Education -->
+        <details class="sidebar-section" open>
+          <summary class="sidebar-title">
+            <span>Ausbildung</span>
+            <!-- Icon: Chevron -->
+            <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <!-- Icon: Certificate Ribbon -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+              <span>Detailhandelsfachmann Consumer Electronics EFZ</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Certificate Ribbon -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+              <span>Sekundarschulabschluss</span>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Details: Languages -->
+        <details class="sidebar-section" open>
+          <summary class="sidebar-title">
+            <span>Sprachkenntnisse</span>
+            <!-- Icon: Chevron -->
+            <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <!-- Icon: Globe -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>Deutsch: Muttersprache</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Globe -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>Englisch: Gute Kenntnisse</span>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Details: Core Competencies -->
+        <details class="sidebar-section" open>
+          <summary class="sidebar-title">
+            <span>Kernkompetenzen</span>
+            <!-- Icon: Chevron -->
+            <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <!-- Icon: Open Book -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+              <span>Autodidaktisches Lernen</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Network Node / Structure -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="18" cy="18" r="3" />
+                <circle cx="6" cy="6" r="3" />
+                <path d="M6 9v12" />
+                <path d="M18 15a9 9 0 0 0-9-9H6" />
+              </svg>
+              <span>Strukturiertes &amp; Lösungsorientiertes Arbeiten</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Magnifying Glass -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>Analytisches Denken &amp; Detailgenauigkeit</span>
+            </li>
+          </ul>
+        </details>
+
+        <!-- Details: Current Learning Focus -->
+        <details class="sidebar-section" open>
+          <summary class="sidebar-title">
+            <span>Aktueller Fokus</span>
+            <!-- Icon: Chevron -->
+            <svg class="sidebar-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              focusable="false">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <!-- Icon: Web -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <line x1="21.17" y1="8" x2="12" y2="8" />
+                <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
+                <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
+              </svg>
+              <span>The Odin Project</span>
+            </li>
+            <li class="sidebar-item">
+              <!-- Icon: Code Brackets -->
+              <svg class="sidebar-item-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <span>Vertiefung JavaScript &amp; TypeScript-Grundlagen</span>
+            </li>
+          </ul>
+        </details>
       </div>
     </aside>
 
+    <!-- ======================================================================
+         Main Content Area
+         ====================================================================== -->
     <main class="main-content">
+
+      <!-- ==========================================
+           Section: Career Timeline / Werdegang
+           ========================================== -->
       <section id="werdegang" class="content-section">
         <div class="section-header">
           <h2 class="section-title">Werdegang</h2>
         </div>
 
         <ol class="timeline">
+          <!-- Item 1: Apprenticeship -->
           <li class="timeline-item">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -214,12 +331,14 @@
             </article>
           </li>
 
+          <!-- Milestone: Graduation-->
           <li class="timeline-item">
             <article class="timeline-card timeline-card--parallelogram">
               <h3 class="timeline-card-title">Erfolgreicher Lehrabschluss</h3>
             </article>
           </li>
 
+          <!-- Item 2: Retail Professional -->
           <li class="timeline-item">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -245,6 +364,7 @@
             </article>
           </li>
 
+          <!-- Item 3: Assistant Branch Manager -->
           <li class="timeline-item">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -275,6 +395,7 @@
             </article>
           </li>
 
+          <!-- Item 4: Retail Professional -->
           <li class="timeline-item">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -297,6 +418,7 @@
             </article>
           </li>
 
+          <!-- Item 5: Call Center Agent -->
           <li class="timeline-item">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -323,6 +445,7 @@
             </article>
           </li>
 
+          <!-- Item 6: Career Break -->
           <li class="timeline-item">
             <article class="timeline-card timeline-card--compact">
               <div class="timeline-card-header timeline-card-header--center">
@@ -332,6 +455,7 @@
             </article>
           </li>
 
+          <!-- Item 7: Current Work Training -->
           <li class="timeline-item timeline-item--future">
             <article class="timeline-card">
               <div class="timeline-card-header">
@@ -358,27 +482,35 @@
             </article>
           </li>
 
+          <!-- Target: Future Apprenticeship -->
           <li class="timeline-item">
             <article class="timeline-card timeline-card--compact timeline-card--future-target">
               <div class="timeline-card-header timeline-card-header--center">
                 <h3 class="timeline-card-title">
-                  Lehrstelle Informatiker / Entwickler digitales Business
+                  Zweitausbildung ICT
                 </h3>
                 <span class="date-pill">ab 2027</span>
               </div>
+              <p class="timeline-card-subtitle">Informatik EFZ · Digital Business · ICT-Fachmann</p>
             </article>
           </li>
         </ol>
       </section>
 
+      <!-- ==========================================
+           Section: Skills Overview
+           ========================================== -->
       <section id="skills" class="content-section">
         <div class="section-header">
           <h2 class="section-title">Skills</h2>
         </div>
 
         <div class="card-grid">
+          <!-- Skill Area: Frontend & UI/UX -->
           <article class="card">
-            <h3 class="card-title">Webdesign &amp; UI/UX</h3>
+            <div class="card-header">
+              <h3 class="card-title">Webdesign &amp; UI/UX</h3>
+            </div>
             <div class="card-body">
               <ul class="card-bullets">
                 <li>HTML &amp; CSS / Flexbox &amp; Grid</li>
@@ -398,8 +530,11 @@
             </div>
           </article>
 
+          <!-- Skill Area: Business & Backend Basics -->
           <article class="card">
-            <h3 class="card-title">Business &amp; Produktivität</h3>
+            <div class="card-header">
+              <h3 class="card-title">Business &amp; Produktivität</h3>
+            </div>
             <div class="card-body">
               <ul class="card-bullets">
                 <li>Prozessoptimierung</li>
@@ -418,8 +553,11 @@
             </div>
           </article>
 
+          <!-- Skill Area: Methodology & Tooling -->
           <article class="card">
-            <h3 class="card-title">Methodik &amp; Tooling</h3>
+            <div class="card-header">
+              <h3 class="card-title">Methodik &amp; Tooling</h3>
+            </div>
             <div class="card-body">
               <ul class="card-bullets">
                 <li>Git &amp; GitHub Versionskontrolle</li>
@@ -442,46 +580,56 @@
         </div>
       </section>
 
+      <!-- ==========================================
+           Section: Featured Projects
+           ========================================== -->
       <section id="projekte" class="content-section">
         <div class="section-header">
           <h2 class="section-title">Projekte</h2>
         </div>
 
         <div class="card-grid">
+          <!-- Project 1: JavaScript30 - TypeScript -->
           <article class="card">
             <div class="card-header">
-              <h3 class="card-title">
-                KMU Formularprozess<br />&amp; Dashboard
-              </h3>
+              <h3 class="card-title">JavaScript30 - TypeScript</h3>
               <span class="status-pill status-pill--progress">In Bearbeitung</span>
             </div>
             <div class="card-body">
               <p class="card-description">
-                Eigenständiges Übungsprojekt zur praktischen Anwendung
-                relationaler Datenbankschemata und Python-Logik. Simuliert
-                einen realen KMU-Auftragsprozess mit Kunden- und
-                Auftragsverwaltung inklusive Stunden- und
-                Materialkostenberechnung. Frontend und Dashboard-Anbindung
-                befinden sich im Aufbau.
+                Praxisnahe Implementierung von 30 Vanilla-JavaScript-Projekten
+                mit Fokus auf native Browser-APIs, Canvas, Audio und
+                DOM-Handling. Aktives Refactoring der Kern-Challenges auf
+                TypeScript zur Vertiefung von Typsicherheit, Interfaces und
+                modernem Tooling.
               </p>
             </div>
             <div class="card-footer">
               <div class="card-tags">
-                <span class="tech-badge tech-badge--python">PYTHON</span>
-                <span class="tech-badge tech-badge--sqlite">SQLITE</span>
+                <span class="tech-badge tech-badge--javascript">JAVASCRIPT</span>
+                <span class="tech-badge tech-badge--html">HTML</span>
+                <span class="tech-badge tech-badge--css">CSS</span>
+                <span class="tech-badge tech-badge--typescript">TYPESCRIPT</span>
               </div>
-              <a href="https://github.com/janf1997-sys" target="_blank" rel="noopener noreferrer" class="card-link">
+              <a href="https://github.com/janf1997-sys/JavaScript30" target="_blank" rel="noopener noreferrer"
+                class="card-link" aria-label="Projekt JavaScript30 - TypeScript auf GitHub ansehen">
                 <span>GITHUB</span>
-                <img src="assets/icons/external-link.svg" alt="" />
+                <!-- Icon: External Link Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true" focusable="false">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
               </a>
             </div>
           </article>
 
+          <!-- Project 2: Pokemon TCG Collector -->
           <article class="card">
             <div class="card-header">
-              <h3 class="card-title">
-                Pokemon TCG Collector<br />&amp; Datenmodell
-              </h3>
+              <h3 class="card-title">Pokemon TCG Collector &amp; Datenmodell</h3>
               <span class="status-pill status-pill--progress">In Bearbeitung</span>
             </div>
             <div class="card-body">
@@ -497,16 +645,25 @@
                 <span class="tech-badge tech-badge--python">PYTHON</span>
                 <span class="tech-badge tech-badge--postgresql">POSTGRESQL</span>
               </div>
-              <a href="https://github.com/janf1997-sys" target="_blank" rel="noopener noreferrer" class="card-link">
+              <a href="https://github.com/janf1997-sys/pokemon-tcg-project" target="_blank" rel="noopener noreferrer"
+                class="card-link" aria-label="Projekt Pokemon TCG Collector auf GitHub ansehen">
                 <span>GITHUB</span>
-                <img src="assets/icons/external-link.svg" alt="" />
+                <!-- Icon: External Link Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true" focusable="false">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
               </a>
             </div>
           </article>
 
+          <!-- Project 3: freeCodeCamp Relational Database -->
           <article class="card">
             <div class="card-header">
-              <h3 class="card-title">FCC Relational<br />Database Kurs</h3>
+              <h3 class="card-title">FCC Relational Database Kurs</h3>
               <span class="status-pill status-pill--completed">Abgeschlossen</span>
             </div>
             <div class="card-body">
@@ -525,15 +682,27 @@
                 <span class="tech-badge tech-badge--bash">BASH</span>
                 <span class="tech-badge tech-badge--postgresql">POSTGRESQL</span>
               </div>
-              <a href="https://github.com/janf1997-sys" target="_blank" rel="noopener noreferrer" class="card-link">
+              <a href="https://github.com/janf1997-sys/freecodecamp-relational-database-course" target="_blank"
+                rel="noopener noreferrer" class="card-link"
+                aria-label="Projekt FCC Relational Database Kurs auf GitHub ansehen">
                 <span>GITHUB</span>
-                <img src="assets/icons/external-link.svg" alt="" />
+                <!-- Icon: External Link Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true" focusable="false">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
               </a>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- ======================================================================
+           Site Footer
+           ====================================================================== -->
       <footer class="footer">
         <div>
           Designed in Figma // Built with HTML, CSS &amp; JS<br />
@@ -546,6 +715,7 @@
     </main>
   </div>
 
+  <!-- Runtime Scripts -->
   <script src="js/main.js"></script>
 </body>
 
